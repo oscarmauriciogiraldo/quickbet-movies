@@ -3,7 +3,7 @@ import RootLayout from "./layout";
 export default function Home(): JSX.Element {
   return (
     <RootLayout>
-      <h1>Welcome to the Inlaze Next.js Starter!</h1>
+      <h1>iniciando proyecto consumiendo api TMBD desde frontend primero</h1>
     </RootLayout>
   );
 }
