@@ -14,3 +14,9 @@ h1 {
   text-align: center;
   font-size: 2rem;
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
