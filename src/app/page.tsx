@@ -1,9 +1,14 @@
+import Banner from "./components/banner/Banner";
 import RootLayout from "./layout";
 
 export default function Home(): JSX.Element {
   return (
     <RootLayout>
-      <h1>iniciando proyecto consumiendo api TMBD desde frontend primero</h1>
+      <div className="bodyContainer">
+      <div className="banner flex w-full h-[436px] justify-center lg:container lg:mx-auto">
+        <Banner></Banner>
+      </div>
+      </div>
     </RootLayout>
   );
 }
