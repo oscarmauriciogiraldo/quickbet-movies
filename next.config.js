@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   /* config options here */
   images: {
     remotePatterns: [
@@ -15,10 +13,8 @@ const nextConfig: NextConfig = {
         hostname: "i.ibb.co",
         pathname: "/**",
       },
-
-    ]
-  }
+    ],
+  },
 };
 
-export default nextConfig;
-
+module.exports = nextConfig;
