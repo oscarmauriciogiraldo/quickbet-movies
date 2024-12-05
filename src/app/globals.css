@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables styles */
+:root {
+  --background: #262626;
+  --foreground: #ededed;
+  --cardContianer-backround: #444444;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
 /* html, * {
   width: 100%;
   font-size: 16px;
@@ -21,6 +34,34 @@ h1 {
   }
 } */
 
-/* 
+/* cards styles */
+.contCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #262626;
+  width: 200px;
+  height: 335px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
- */
+.imageCard{
+  
+  width: 100%;
+  height: 65%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contetDescriptionCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+}
