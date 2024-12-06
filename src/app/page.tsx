@@ -3,6 +3,7 @@ import Banner from "./components/banner/Banner";
 import RootLayout from "./layout";
 import SearchComponent from "./components/search-component/SearchComponent";
 import SelectComponent from "./components/select-component/SelectComponent";
+import MovieListContainer from "./components/content/MovieListContainer";
 
 export default async function Home() {
   const nowPlayingMovies = await getNowPlaying();
@@ -35,6 +36,7 @@ export default async function Home() {
         {/* Content movies */}
         <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
           content movies list
+          <MovieListContainer movies={popularMovies} title="Popular"/>
         </div>
       </main>
       </div>
