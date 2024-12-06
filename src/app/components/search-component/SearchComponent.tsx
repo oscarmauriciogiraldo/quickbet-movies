@@ -48,7 +48,7 @@ const SearchComponent = () => {
                                     ]
                                 }}
                                 endContent={
-                                <IoSearch className="text-2xl text-default-400 pointer-events-none flex-shrink-0"/>
+                                <IoSearch className="text-2xl text-gray-500 hover:text-white cursor-pointer flex-shrink-0"/>
                                 }
                                 {...field}
                             />

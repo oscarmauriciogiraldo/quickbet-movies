@@ -2,6 +2,7 @@ import { getNowPlaying, getPopularMovies, getTopRatedMovies, getUpcomingMovies }
 import Banner from "./components/banner/Banner";
 import RootLayout from "./layout";
 import SearchComponent from "./components/search-component/SearchComponent";
+import SelectComponent from "./components/select-component/SelectComponent";
 
 export default async function Home() {
   const nowPlayingMovies = await getNowPlaying();
@@ -26,14 +27,14 @@ export default async function Home() {
               <h3>Genres</h3>
             </div>
             <div className="flex">
-              
+              <SelectComponent/>
             </div>
           </div>
         </div>
 
         {/* Content movies */}
         <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
-          
+          content movies list
         </div>
       </main>
       </div>
