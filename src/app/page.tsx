@@ -36,6 +36,9 @@ export default async function Home() {
         {/* Content movies */}
         <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
           <MovieListContainer movies={popularMovies} title="Popular"/>
+          <MovieListContainer movies={nowPlayingMovies} title="Now Playing"/>
+          <MovieListContainer movies={upcomingMovies} title="Upcomming"/>
+          <MovieListContainer movies={topRatedMovies} title="Top rated"/>
         </div>
       </main>
       </div>
