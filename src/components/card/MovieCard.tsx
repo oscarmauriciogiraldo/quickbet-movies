@@ -1,16 +1,21 @@
-import React from 'react';
+'use client'
 import Image from 'next/image';
 import { CiHeart } from "react-icons/ci";
 import { getImagePath } from '@/lib/getImagePath';
 import {CircularProgress} from "@nextui-org/react";
 import { Movie } from '@/interface/types';
+import { useRouter } from 'next/navigation';
 
 
 
 const MovieCard = ({movie}:{movie:Movie}) => {
+    const router = useRouter()
+    const handleRoute = () => {
+        router.push(`/movie/${movie?.id}`)
+    }
     return (
         <div className='contCard'>
-            <div className='imageCard'>
+            <div onClick={handleRoute}  className='imageCard hover:scale-105 transition duration-200 ease-out cursor-pointer'>
                 <Image
                     className='w-[100%] h-[100%] absolute object-cover bg-[red]' 
                     src={getImagePath( movie?.poster_path)}

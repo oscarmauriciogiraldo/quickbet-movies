@@ -2,11 +2,11 @@
 import { Button, Modal, ModalBody, ModalContent, useDisclosure } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link"
-import Logo from "../../../../public/Logo.png";
+import Logo from "@public/Logo.png";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import React from "react";
-import AuthComponent from "../auth/AuthComponent";
+import AuthComponent from "../../app/components/auth/AuthComponent";
 
 const Header = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
