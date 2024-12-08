@@ -18,29 +18,29 @@ export default async function Home() {
           <Banner></Banner>
         </div>
         <main className="flex flex-row row-start-2 items-center sm:items-start lg:container lg:mx-auto">
-        {/* section left search and select genres */}
-        <div className="boxLeft h-screen flex flex-col w-[25%] px-[10px] gap-8">
-          
-          <SearchComponent/>
+          {/* section left search and select genres */}
+          <div className="boxLeft h-screen flex flex-col w-[25%] px-[10px] gap-8">
+            
+            <SearchComponent/>
 
-          <div className="flex flex-col ">
-            <div className="title">
-              <h3>Genres</h3>
-            </div>
-            <div className="flex">
-              <SelectComponent/>
+            <div className="flex flex-col ">
+              <div className="title">
+                <h3>Genres</h3>
+              </div>
+              <div className="flex">
+                <SelectComponent/>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content movies */}
-        <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
-          <MovieListContainer movies={popularMovies} title="Popular"/>
-          <MovieListContainer movies={nowPlayingMovies} title="Now Playing"/>
-          <MovieListContainer movies={upcomingMovies} title="Upcomming"/>
-          <MovieListContainer movies={topRatedMovies} title="Top rated"/>
-        </div>
-      </main>
+          {/* Content movies */}
+          <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
+            <MovieListContainer movies={popularMovies} title="Popular"/>
+            <MovieListContainer movies={nowPlayingMovies} title="Now Playing"/>
+            <MovieListContainer movies={upcomingMovies} title="Upcomming"/>
+            <MovieListContainer movies={topRatedMovies} title="Top rated"/>
+          </div>
+        </main>
       </div>
     </RootLayout>
   );

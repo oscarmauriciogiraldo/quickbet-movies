@@ -49,6 +49,12 @@ export const getUpcomingMovies = async () => {
     const data = await getMovies(url);
     return data.results;
   };
+
+  export const getRecomendationMovies = async (id?: string) => {
+    const url = new URL(`https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`);
+    const data = await getMovies(url);
+    return data.results;
+  };
   
   export const getDiscoverMovies = async (id?: string, keywords?: string) => {
     const url = new URL("https://api.themoviedb.org/3/discover/movie");

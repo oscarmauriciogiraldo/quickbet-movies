@@ -17,7 +17,7 @@ const MovieCard = ({movie}:{movie:Movie}) => {
         <div className='contCard'>
             <div onClick={handleRoute}  className='imageCard hover:scale-105 transition duration-200 ease-out cursor-pointer'>
                 <Image
-                    className='w-[100%] h-[100%] absolute object-cover bg-[red]' 
+                    className='w-[100%] h-[100%] absolute object-cover' 
                     src={getImagePath( movie?.poster_path)}
                     alt={movie?.title}
                     width={1920}

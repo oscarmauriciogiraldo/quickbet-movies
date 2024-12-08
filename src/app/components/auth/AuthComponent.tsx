@@ -124,67 +124,67 @@ const AuthComponent = () => {
                     <Tab className="px-2" key="login" title="Log in">
                     <div className="flex flex-col justify-center items-center w-[424px] h-[480px] ">
                         <form className="flex flex-col gap-8 p-4">
-                        <p className="text-center text-sm">
-                            We love having you back
-                        </p>
-                        <div className="boxSearch w-[390px] flex flex-wrap md:flex-nowrap mb-6 md:mb-0 rounded-t-lg bg-[#ffffff]">
-                        
-                            <Input
-                            isRequired
-                            placeholder="Email"
-                            type="email"
-                            isClearable
-                            classNames={{
-                                input: ["text-black/90 dark:text-white/90"],
-                                innerWrapper: "bg-transparent",
-                                inputWrapper: [
-                                    "rounded-t-lg",
-                                    "px-2",
-                                    "rounded-b-none",
-                                    "!cursor-text",
-                                ],
-                            }}
-                            />
-                        </div>
-                        <div className="boxSearch flex flex-wrap md:flex-nowrap mb-6 md:mb-0 rounded-t-lg bg-[#1c1c1c]">
-                            <Input
-                            isRequired
-                            placeholder="Enter your password"
-                            endContent={
-                                <button
-                                className="focus:outline-none"
-                                type="button"
-                                onClick={toggleVisibility}
-                                aria-label="toggle password visibility"
-                                >
-                                {isVisible ? (
-                                    <FaRegEyeSlash className="text-base text-default-400 pointer-events-none" />
-                                ) : (
-                                    <FaRegEye className="text-base text-default-400 pointer-events-none" />
-                                )}
-                                </button>
-                            }
-                            classNames={{
-                                input: ["text-black/90 dark:text-white/90"],
-                                innerWrapper: "bg-transparent",
-                                inputWrapper: [
-                                    "rounded-t-lg",
-                                    "px-2",
-                                    "rounded-b-none",
-                                    "!cursor-text",
-                                ],
-                            }}
-                            type={isVisible ? "text" : "password"}
-                            />
-                        </div>
-                        <div className="flex gap-2 justify-end">
-                            <Button fullWidth endContent={<LuTicket />} className="bg-[#F0B90B] rounded">
-                            Continue
-                            </Button>
-                        </div>
-                        <p className="text-center text-xs">
-                            For any questions, reach out to suppert@Quickbetdmovies.com
-                        </p>
+                            <p className="text-center text-sm">
+                                We love having you back
+                            </p>
+                            <div className="boxSearch w-[390px] flex flex-wrap md:flex-nowrap mb-6 md:mb-0 rounded-t-lg bg-[#ffffff]">
+                            
+                                <Input
+                                isRequired
+                                placeholder="Email"
+                                type="email"
+                                isClearable
+                                classNames={{
+                                    input: ["text-black/90 dark:text-white/90"],
+                                    innerWrapper: "bg-transparent",
+                                    inputWrapper: [
+                                        "rounded-t-lg",
+                                        "px-2",
+                                        "rounded-b-none",
+                                        "!cursor-text",
+                                    ],
+                                }}
+                                />
+                            </div>
+                            <div className="boxSearch flex flex-wrap md:flex-nowrap mb-6 md:mb-0 rounded-t-lg bg-[#1c1c1c]">
+                                <Input
+                                isRequired
+                                placeholder="Enter your password"
+                                endContent={
+                                    <button
+                                    className="focus:outline-none"
+                                    type="button"
+                                    onClick={toggleVisibility}
+                                    aria-label="toggle password visibility"
+                                    >
+                                    {isVisible ? (
+                                        <FaRegEyeSlash className="text-base text-default-400 pointer-events-none" />
+                                    ) : (
+                                        <FaRegEye className="text-base text-default-400 pointer-events-none" />
+                                    )}
+                                    </button>
+                                }
+                                classNames={{
+                                    input: ["text-black/90 dark:text-white/90"],
+                                    innerWrapper: "bg-transparent",
+                                    inputWrapper: [
+                                        "rounded-t-lg",
+                                        "px-2",
+                                        "rounded-b-none",
+                                        "!cursor-text",
+                                    ],
+                                }}
+                                type={isVisible ? "text" : "password"}
+                                />
+                            </div>
+                            <div className="flex gap-2 justify-end">
+                                <Button fullWidth endContent={<LuTicket />} className="bg-[#F0B90B] rounded">
+                                    Continue
+                                </Button>
+                            </div>
+                            <p className="text-center text-xs">
+                                For any questions, reach out to suppert@Quickbetdmovies.com
+                            </p>
                         </form>
                     </div>
                     </Tab>

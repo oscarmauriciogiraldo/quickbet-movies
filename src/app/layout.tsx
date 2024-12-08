@@ -19,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={ibm.className}>
         <Header />
-        <main>
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
