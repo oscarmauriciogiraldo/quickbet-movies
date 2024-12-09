@@ -4,6 +4,7 @@ import RootLayout from "./layout";
 import SearchComponent from "./components/search-component/SearchComponent";
 import SelectComponent from "./components/select-component/SelectComponent";
 import MovieListContainer from "./components/content/MovieListContainer";
+import Header from "@/components/header/Header";
 
 export default async function Home() {
   const nowPlayingMovies = await getNowPlaying();
@@ -13,6 +14,8 @@ export default async function Home() {
 
   return (
     <RootLayout>
+        <Header />
+
       <div className="bodyContainer">
         <div className="banner flex w-full h-[436px] justify-center lg:container lg:mx-auto">
           <Banner></Banner>
@@ -34,7 +37,7 @@ export default async function Home() {
           </div>
 
           {/* Content movies */}
-          <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-2">
+          <div className="boxRight bg-[--cardContianer-backround] flex flex-col w-[75%] px-4">
             <MovieListContainer movies={popularMovies} title="Popular"/>
             <MovieListContainer movies={nowPlayingMovies} title="Now Playing"/>
             <MovieListContainer movies={upcomingMovies} title="Upcomming"/>

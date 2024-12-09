@@ -2,7 +2,7 @@ import {NextUIProvider} from '@nextui-org/react'
 import { FC, PropsWithChildren } from 'react';
 
 
-const providers: FC<PropsWithChildren> = ({children}) => {
+const Providers: FC<PropsWithChildren> = ({children}) => {
     return (
         <NextUIProvider>
             {children}
@@ -10,4 +10,4 @@ const providers: FC<PropsWithChildren> = ({children}) => {
     );
 };
 
-export default providers;
+export default Providers;

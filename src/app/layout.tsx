@@ -7,7 +7,7 @@ const ibm = IBM_Plex_Sans({ subsets: ["latin"], weight: ["100", "200", "300", "4
 
 export const metadata: Metadata = {
   title: "Quickbet Movies",
-  description: "Created by Ingeniero Oscar Giraldo frontend developer",
+  description: "Quickbet movies site",
 };
 
 export default function RootLayout({
@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ibm.className}>
-        <Header />
         {children}
       </body>
     </html>
