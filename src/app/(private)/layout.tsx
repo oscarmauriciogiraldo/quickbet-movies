@@ -12,7 +12,7 @@ export default function MovieDetailLayout({
   return (
     <html lang="en">
         <body className={ibm.className}>
-        <Header />
+          <Header />
 
             {children}
         </body>

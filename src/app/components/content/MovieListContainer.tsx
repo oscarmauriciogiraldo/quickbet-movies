@@ -1,6 +1,7 @@
 'use client'
 import MovieCard from "@/components/card/MovieCard";
 import { Movie } from "@/interface/types";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import Carousel from "react-multi-carousel";
@@ -12,7 +13,7 @@ type Props = {
   isVerticalOrientation?: boolean;
 };
 
-const MovieListContainer = ({ title, movies }: Props) => {
+const MovieListContainer = ({ title, movies, isVerticalOrientation }: Props) => {
   /* Setings carousel */
   const responsive = {
     superLargeDesktop: {
@@ -46,11 +47,41 @@ const MovieListContainer = ({ title, movies }: Props) => {
                 </Link> */}
         {/* <span className="w-16 h-1 bg-red-600 inline-block absolute left-0 -bottom-[1.5px] z-10" /> */}
       </div>
-      <Carousel responsive={responsive}>
-        {movies.map((movie) => (
-          <MovieCard key={movie?.id} movie={movie} />
-        ))}
-      </Carousel>
+      <div className={cn(
+        "justify-center px-1",
+        isVerticalOrientation && "flex-col space-x-0 space-y-12"
+      )}>
+        {isVerticalOrientation
+          ? movies.map((movie) =>(
+            <div
+              key={movie.id}
+              className={cn(
+                isVerticalOrientation &&
+                "flex flex-col space-y-5 mb-5 items-start lg:flex-row space-x-5"
+              )}
+            >
+              <MovieCard key={movie?.id} movie={movie} />
+              <div className="max-w-2xl">
+                <p className="font-bold">
+                  {movie?.title} ({movie?.release_date?.split("-")[0]})
+                </p>
+                <hr className="mb-3" />
+                <p>{movie?.overview}</p>
+              </div>
+            </div>
+          )) : 
+          <Carousel responsive={responsive}>
+            {movies.map((movie) => (
+              <MovieCard key={movie?.id} movie={movie} />
+            ))}
+          </Carousel>
+        }
+        {/* <Carousel responsive={responsive}>
+          {movies.map((movie) => (
+            <MovieCard key={movie?.id} movie={movie} />
+          ))}
+        </Carousel> */}
+      </div>
       
     </div>
   );

@@ -103,7 +103,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
                           <div className="flex flex-row w-[30%] justify-start gap-3">
                           <CircularProgress
                               size="lg"
-                              value={details?.vote_average}
+                              value={details?.vote_count}
                               color="success"
                               showValueLabel={true}
                           />

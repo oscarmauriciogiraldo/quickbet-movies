@@ -1,10 +1,11 @@
 import { getNowPlaying, getPopularMovies, getTopRatedMovies, getUpcomingMovies } from "@/lib/getMovies";
 import Banner from "./components/banner/Banner";
 import RootLayout from "./layout";
-import SearchComponent from "./components/search-component/SearchComponent";
-import SelectComponent from "./components/select-component/SelectComponent";
+
 import MovieListContainer from "./components/content/MovieListContainer";
 import Header from "@/components/header/Header";
+import SearchComponent from "@/components/search-component/SearchComponent";
+import SelectComponent from "@/components/select-component/SelectComponent";
 
 export default async function Home() {
   const nowPlayingMovies = await getNowPlaying();
@@ -14,7 +15,7 @@ export default async function Home() {
 
   return (
     <RootLayout>
-        <Header />
+      <Header/>
 
       <div className="bodyContainer">
         <div className="banner flex w-full h-[436px] justify-center lg:container lg:mx-auto">
